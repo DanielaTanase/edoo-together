@@ -3,10 +3,15 @@
 
 <head>
 	<title>EDOO</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="./css/main.css" />
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Edoo" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
@@ -43,8 +48,8 @@
 					</ul>
 				</nav>
 				<div class="logo-one">
-					<a class="logo-header" href=" index.html" target="_blank">
-						<img src="images/edoo.svg" width="80" height="80" alt="edoo" />
+					<a class="logo-header" href="index.html" target="_blank">
+						<img src="images/edoo.svg" width="80" height="80" alt="edoo">
 					</a>
 				</div>
 				<nav class="navbar">
@@ -80,136 +85,142 @@
 					<button class="users-btn font-weight-900 log-in-btn" disabled>Log in</button>
 					<button class="users-btn font-weight-900 sign-up-btn" disabled>Sign up</button>
 				</div>
-				</>
 			</div>
+		</div>
 	</header>
-	<main>
-		<section class="slider">
-		</section>
-		<section class="courses">
-			<div class="edoo-header-middle-section">
-				<input class="search-bar" type="text" placeholder="Search">
-				<button class="search-button">
-					<img class="search-icon" src="images/search-icon.png">
-				</button>
+	<main style="margin-top: 200px;">
+		<div class="section">
+			<div class="container">
+				<div class="flex flex-between">
+					<div class="col-12">
+						<input type="search" name="search-input" class="search-input" placeholder="Search..." autocomplete="off">
+					</div>
+					<div class="col-3 col-sm-12">
+						<div class="form-element">
+							<label for="sort">Sort by</label>
+							<div class="form-element dropdown">
+								<select id="sort" class="sort">
+									<option value="0">Default</option>
+									<option value="1">Price: Low to High</option>
+									<option value="2">Price: High to Low</option>
+									<option value="3">A-Z</option>
+									<option value="4">Z-A</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-element">
+							<input type="checkbox" name="filters" id="filters" class="input-trigger">
+							<label for="filters" data-label-btn="Hide filters">Show filters</label>
+							<div class="filters">
+								<div class="form-element">
+									<button type="button" class="filter-reset">Clear filters</button>
+								</div>
+								<div class="form-element">
+									<div class="dropdown">
+										<button type="button" class="dropdown-selection toggle">Language</button>
+										<div class="dropdown-list">
+											<div>
+												<input type="checkbox" name="filter-language" id="filter-language-en" class="filter-input" value="English">
+												<label for="filter-language-en">English</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-language" id="filter-language-fr" class="filter-input" value="French">
+												<label for="filter-language-fr">French</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-language" id="filter-language-de" class="filter-input" value="German">
+												<label for="filter-language-de">German</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-language" id="filter-language-it" class="filter-input" value="Italian">
+												<label for="filter-language-it">Italian</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-language" id="filter-language-es" class="filter-input" value="Spanish">
+												<label for="filter-language-es">Spanish</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-element">
+									<div class="dropdown">
+										<button type="button" class="dropdown-selection toggle">Topic</button>
+										<div class="dropdown-list">
+											<div>
+												<input type="checkbox" name="filter-topic" id="filter-topic-js" class="filter-input" value="Javascript">
+												<label for="filter-topic-js">Javascript</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-topic" id="filter-topic-react" class="filter-input" value="React">
+												<label for="filter-topic-react">React</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-topic" id="filter-topic-css" class="filter-input" value="CSS">
+												<label for="filter-topic-css">CSS</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-topic" id="filter-topic-html" class="filter-input" value="HTML">
+												<label for="filter-topic-html">HTML</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-topic" id="filter-topic-node" class="filter-input" value="Node.js">
+												<label for="filter-topic-node">Node.js</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-topic" id="filter-topic-next" class="filter-input" value="Next.js">
+												<label for="filter-topic-next">Next.js</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-element">
+									<div class="dropdown">
+										<button type="button" class="dropdown-selection toggle">Level</button>
+										<div class="dropdown-list">
+											<div>
+												<input type="checkbox" name="filter-level" id="filter-level-beginner" class="filter-input" value="Beginner">
+												<label for="filter-level-beginner">Beginner</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-level" id="filter-level-intermediate" class="filter-input" value="Intermediate">
+												<label for="filter-level-intermediate">Intermediate</label>
+											</div>
+											<div>
+												<input type="checkbox" name="filter-level" id="filter-level-expert" class="filter-input" value="Expert">
+												<label for="filter-level-expert">Expert</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-element">
+									<div class="dropdown">
+										<button type="button" class="dropdown-selection toggle">Price</button>
+										<div class="dropdown-list">
+											<div>
+												<input type="radio" name="filter-paid" id="filter-paid-1" class="filter-input" value="1">
+												<label for="filter-paid-1">Paid</label>
+											</div>
+											<div>
+												<input type="radio" name="filter-paid" id="filter-paid-0" class="filter-input" value="0">
+												<label for="filter-paid-0">Free</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-8 col-sm-12">
+						<div id="root"></div>
+						<div id="pagination"></div>
+					</div>
+				</div>
 			</div>
-			<div class="filter-panel">
-				<div class="filter"></div>
-				<div class="sort"></div>
-				<div class="clear-btn"></div>
-			</div>
-			<div class="courses-container">
-				<div class="course">
-					<div class="course-image">
-						<figure class="image is-1by1">
-							<img src="images/thumbnail-1.jpeg" alt="" />
-						</figure>
-					</div>
-					<div class="course-description">
-						<div class="course-title">
-							<p class="title">Lorem ipsum</p>
-						</div>
-						<div class="course-subtitle">
-							<p class=" subtitle">Lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="course-info">
-							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolores illum. Neque officia odio ratione, incidunt iste facere ab ipsum voluptas fuga a fugiat nisi doloremque eius necessitatibus aliquid in.</p>
-						</div>
-					</div>
-				</div>
-				<div class="course">
-					<div class="course-image">
-						<figure class="image is-1by1">
-							<img src="images/thumbnail-2.jpeg" alt="" />
-						</figure>
-					</div>
-					<div class="course-description">
-						<div class="course-title">
-							<p class="title">Lorem ipsum</p>
-						</div>
-						<div class="course-subtitle">
-							<p class=" subtitle">Lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="course-info">
-							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolores illum. Neque officia odio ratione, incidunt iste facere ab ipsum voluptas fuga a fugiat nisi doloremque eius necessitatibus aliquid in.</p>
-						</div>
-					</div>
-				</div>
-				<div class="course">
-					<div class="course-image">
-						<figure class="image is-1by1">
-							<img src="images/thumbnail-3.jpeg" alt="" />
-						</figure>
-					</div>
-					<div class="course-description">
-						<div class="course-title">
-							<p class="title">Lorem ipsum</p>
-						</div>
-						<div class="course-subtitle">
-							<p class=" subtitle">Lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="course-info">
-							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolores illum. Neque officia odio ratione, incidunt iste facere ab ipsum voluptas fuga a fugiat nisi doloremque eius necessitatibus aliquid in.</p>
-						</div>
-					</div>
-				</div>
-				<div class="course">
-					<div class="course-image">
-						<figure class="image is-1by1">
-							<img src="images/thumbnail-4.jpeg" alt="" />
-						</figure>
-					</div>
-					<div class="course-description">
-						<div class="course-title">
-							<p class="title">Lorem ipsum</p>
-						</div>
-						<div class="course-subtitle">
-							<p class=" subtitle">Lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="course-info">
-							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolores illum. Neque officia odio ratione, incidunt iste facere ab ipsum voluptas fuga a fugiat nisi doloremque eius necessitatibus aliquid in.</p>
-						</div>
-					</div>
-				</div>
-				<div class="course">
-					<div class="course-image">
-						<figure class="image is-1by1">
-							<img src="images/thumbnail-5.jpeg" alt="" />
-						</figure>
-					</div>
-					<div class="course-description">
-						<div class="course-title">
-							<p class="title">Lorem ipsum</p>
-						</div>
-						<div class="course-subtitle">
-							<p class=" subtitle">Lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="course-info">
-							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolores illum. Neque officia odio ratione, incidunt iste facere ab ipsum voluptas fuga a fugiat nisi doloremque eius necessitatibus aliquid in.</p>
-						</div>
-					</div>
-				</div>
-				<div class="course">
-					<div class="course-image">
-						<figure class="image is-1by1">
-							<img src="images/thumbnail-6.jpeg" alt="" />
-						</figure>
-					</div>
-					<div class="course-description">
-						<div class="course-title">
-							<p class="title">Lorem ipsum</p>
-						</div>
-						<div class="course-subtitle">
-							<p class=" subtitle">Lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="course-info">
-							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolores illum. Neque officia odio ratione, incidunt iste facere ab ipsum voluptas fuga a fugiat nisi doloremque eius necessitatibus aliquid in.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		</div>
 	</main>
+
+	<script type="module" src="js/main.js"></script>
+
 </body>
 
 </html>
