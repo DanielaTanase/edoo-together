@@ -1,8 +1,8 @@
 import data from './data.js';
 
 let pagination = {
-	limit: 10,
-	current: 0,
+	limit: 5,
+	current: 1,
 	count: 0
 };
 
@@ -146,9 +146,19 @@ document.addEventListener('change', e => {
 	}
 });
 
+/*
 document.addEventListener('keyup', e => {
 	if (e.target.matches('.search-input')) {
 		state.search = e.target.value;
+		filterData();
+	}
+});
+*/
+
+document.addEventListener('submit', e => {
+	if (e.target.matches('.search-form')) {
+		e.preventDefault();
+		state.search = document.querySelector('.search-input').value;
 		filterData();
 	}
 });
@@ -181,5 +191,21 @@ document.addEventListener('change', () => {
 document.addEventListener('click', e => {
 	if (e.target.matches('.filter-reset')) {
 		resetFilters();
+	}
+});
+
+document.addEventListener('click', e => {
+	if (e.target.closest('.trigger')) {
+		let trigger = e.target.closest('.trigger');
+		let dest = document.querySelector(trigger.dataset.dest);
+		if (dest) {
+			if (trigger.classList.contains('active')) {
+				trigger.classList.remove('active');
+				dest.classList.remove('active');
+			} else {
+				trigger.classList.add('active');
+				dest.classList.add('active');
+			}
+		}
 	}
 });
