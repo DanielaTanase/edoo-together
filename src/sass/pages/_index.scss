@@ -1,115 +1,53 @@
-.header {
+body {
+	padding-top: 90px;
+}
+
+.edoo-header-middle-section {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex: 1;
+	margin:auto;
+	max-width: 1220px;
+}
+.search-bar {
+	flex:1;
+	height: 44px;
+	padding-left: 10px;
+	font-size: 16px;
+	border: 1px solid $grey_lightest;
+	border-radius: 5px;
+	box-shadow: inset 1px 2px 3px $white_alt;
+	width: 0;
+}
+
+.search-button {
+	height: 44px;
+	width: 66px;
 	background-color: $white_alt;
-	height: 80px;
-	padding-top: 0;
-	.container-flex {
-		display: flex;
-		justify-content: space-between;
-	}
-	.navbar-sm {
-		display: none;
-	}
-	.logo-one {
-		width: 80px;
-		height: 80px;
-	}
-	.navbar {
-		margin: auto;
-	}
-	.menu-item {
-		min-width: 100px;
-		margin-top: 0;
-		padding: 10px 20px;
-		color: $purple_dark;
-		text-align: center;
-		a {
-			color: $purple_dark;
-		}
-		&:before {
-			content:none;
-		}
-		&:hover {
-			border-top-right-radius: 5px;
-			border-top-left-radius: 5px;
-			background-color: $purple;
-			color:$white;
-			transition: 0.5s;
-			& a {
-				color: $white;
-			}
-			.subnav-content {
-				opacity: 1;
-    			height: auto;
-				a {
-					color:$purple;
-				}
-			}
-
-		}
-	}
-	.subnav-content {
-		position: absolute;
-		display: block;
-		top: 45px;
-		left: 0;
-		min-width: 100%;
-		margin: auto;
-		background-color:$purple_light;
-		opacity: 0;
-		height: 0;
-		overflow: hidden;
-		transition: opacity 0.5s;
-	}
-	.subnav-item {
-		margin-top: 0;
-		padding: 10px;
-		color: $purple_dark;
-		&:before {
-			content: none;
-		}
-		&:hover {
-			font-weight: 900;
-			transition: 0.5s;
-		}
-	}
-	.buttons {
-		display:flex;
-		align-items: center;
-	}
-	.users-btn {
-		margin: 5px;
-		min-width: 100px;
-		border: 1px solid $purple_dark;
-		white-space: nowrap;
-
-	}
-	.sign-up-btn {
-		color:$white;
-		&:hover {
-			background-color: $purple_light;
-			color: $purple;
-			transition: 0.5s;
-
-		}
-	}
-	.log-in-btn {
-		background-color: $purple_light;
-		color: $purple;
-		&:hover {
-			background-color: $purple;
-			color: $white;
-			transition: 0.5s;
-		}
+	border: 1px solid $grey_lighter;
+	margin-left: -10px;
+	margin-right: 10px;
+	cursor: pointer;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	position: relative;
+	&:hover {
+		background-color: $purple_light_opacity_7;
 	}
 }
-@media all and (max-width:$sm) {
-	.header {
-		.navbar-sm {
-			display: flex;
-		}
-		.navbar {
-			display: none;
-		}
-	}
+
+
+
+.search-bar::placeholder {
+	font-size: 16px
+}
+
+.search-icon {
+	height: 25px;
+	margin-top: 4px;
+	cursor: pointer;
 }
 

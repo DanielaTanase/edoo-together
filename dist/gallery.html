@@ -4,47 +4,88 @@
 <head>
 	<title>Gallery</title>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
-	<header>
-		<div class="logo-one">
-			<a href="" target="_blank">
-				<img src="images/edoo.svg" width="83" height="22" alt="" />
-			</a>
-		</div>
-		<div class="navbar">
-			<nav>
-				<a href="#home">Home</a>
-				<div class="subnav">
-					<button class="subnavbtn">About</button>
-					<div class="subnav-content">
-						<a href="#company">Company</a>
-						<a href="#team">Team</a>
-						<a href="#careers">Careers</a>
-					</div>
+	<header class="header">
+		<div class="container container-height">
+			<div class="container-flex">
+				<div class="menu-sm">
+					<img src="images/menu-icon3.svg" width="60" height="60" alt="menu" />
 				</div>
-				<div class="subnav">
-					<button class="subnavbtn">Services</button>
-					<div class="subnav-content">
-						<a href="#bring">Bring</a>
-						<a href="#deliver">Deliver</a>
-						<a href="#package">Package</a>
-						<a href="#express">Express</a>
-					</div>
+				<nav class="navbar-sm">
+					<ul class="menu">
+						<li class="menu-item menu-item-sm link-sm">
+							<a href=" gallery.html">Gallery</a>
+						</li>
+						<li class="menu-item menu-item-sm">
+							Services
+							<ul class="subnav-content-sm">
+								<li class="subnav-item-sm"><a href="#bring">Bring</a></li>
+								<li class="subnav-item-sm"><a href="#deliver">Deliver</a></li>
+								<li class="subnav-item-sm"><a href="#package">Package</a></li>
+								<li class="subnav-item-sm"><a href="#express">Express</a></li>
+							</ul>
+						</li>
+
+						<li class="menu-item menu-item-sm">
+							Partners
+							<ul class="subnav-content-sm">
+								<li class="subnav-item-sm"><a href="#link1">Link 1</a></li>
+								<li class="subnav-item-sm"><a href="#link2">Link 2</a></li>
+								<li class="subnav-item-sm"><a href="#link3">Link 3</a></li>
+								<li class="subnav-item-sm"><a href="#link4">Link 4</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-sm link-sm">
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="logo-one">
+					<a class="logo-header" href=" index.html" target="_blank">
+						<img src="images/edoo.svg" width="80" height="80" alt="edoo" />
+					</a>
 				</div>
-				<div class="subnav">
-					<button class="subnavbtn">Partners</button>
-					<div class="subnav-content">
-						<a href="#link1">Link 1</a>
-						<a href="#link2">Link 2</a>
-						<a href="#link3">Link 3</a>
-						<a href="#link4">Link 4</a>
-					</div>
+				<nav class="navbar">
+					<ul class="menu">
+						<li class="menu-item link-sm">
+							<a href="gallery.html">Gallery</a>
+						</li>
+						<li class="menu-item">
+							Services
+							<ul class="subnav-content">
+								<li class="subnav-item"><a href="#bring">Bring</a></li>
+								<li class="subnav-item"><a href="#deliver">Deliver</a></li>
+								<li class="subnav-item"><a href="#package">Package</a></li>
+								<li class="subnav-item"><a href="#express">Express</a></li>
+							</ul>
+						</li>
+
+						<li class="menu-item">
+							Partners
+							<ul class="subnav-content">
+								<li class="subnav-item"><a href="#link1">Link 1</a></li>
+								<li class="subnav-item"><a href="#link2">Link 2</a></li>
+								<li class="subnav-item"><a href="#link3">Link 3</a></li>
+								<li class="subnav-item"><a href="#link4">Link 4</a></li>
+							</ul>
+						</li>
+						<li class="menu-item link-sm">
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="buttons">
+					<button class="users-btn font-weight-900 log-in-btn" disabled>Log in</button>
+					<button class="users-btn font-weight-900 sign-up-btn" disabled>Sign up</button>
 				</div>
-				<a href="#contact">Contact</a>
-			</nav>
+				<div class="profil">
+					<img src="images/profile_icon.svg" width="60" height="60" alt="edoo" />
+				</div>
+			</div>
 		</div>
 	</header>
 </body>
