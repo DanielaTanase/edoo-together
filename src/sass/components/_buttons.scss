@@ -18,11 +18,6 @@ button, .btn {
 		background:$purple;
 		color:$white;
 	}
-	&.loading {
-		&:after {
-			border-radius:10px;
-		}
-	}
 }
 
 .btn {
@@ -33,64 +28,8 @@ button, .btn {
 	width:280px;
 	min-width:140px;
 	overflow:visible;
-	&:after {
-		content:'';
-		flex:0 0 auto;
-		width:20px;
-		height:20px;
-		margin-left:5px;
-		background:url('') center / contain no-repeat;
-	}
-	&.loading {
-		background:$grey_dark;
-		&:hover, &:focus {
-			background:$grey_dark;
-			color:$white;
-			cursor:wait;
-			&:before {
-				background:$grey_dark;
-			}
-			&:after {
-				background-image:url('');
-			}
-		}
-		&:before {
-			background:$grey_dark;
-		}
-		&:after {
-			position:static;
-			animation:loading-animation 2s infinite;
-		}
-	}
 	&.font-weight-900 {
 		font-weight:900;
-	}
-	&-fw {
-		border-radius:0 10px 10px 0;
-		&:before {
-			content:'';
-			position:absolute;
-			top:0;
-			right:100%;
-			flex:0 0 auto;
-			width:calc((100vw - 1220px) / 2 + 20px);
-			height:100%;
-			background:inherit;
-		}
-	}
-	&-reverse {
-		&.btn-fw {
-			border-radius:10px 0 0 10px;
-			&:before {
-				right:auto;
-				left:100%;
-			}
-		}
-		&:after {
-			order:-1;
-			margin-right:5px;
-			margin-left:0;
-		}
 	}
 	&-white {
 		border:1px solid $black;
@@ -118,9 +57,6 @@ button, .btn {
 	&.active {
 		background:$purple_dark;
 		color:$white;
-		&:after {
-			background-image:url('');
-		}
 	}
 	&-width {
 		width:100%;
@@ -130,72 +66,17 @@ button, .btn {
 		width:auto;
 		min-width:none;
 	}
-	&-start {
-		justify-content:flex-start;
-		&.btn-fw {
-			padding-left:0;
-		}
-	}
-	&-end {
-		justify-content:flex-end;
-		&.btn-fw {
-			padding-right:0;
-		}
-	}
 	&-outline {
 		border:1px solid $black;
 		background:$white;
 		color:$black;
 		text-transform:uppercase;
-		&:after {
-			content:none;
-		}
-		&.btn-fw {
-			&:before {
-				top:-1px;
-				height:calc(100% + 2px);
-				border:1px solid $black;
-				border-right:0;
-				border-left:0;
-			}
-			&.btn-reverse {
-				border-right:0;
-			}
-			&:not(.btn-reverse) {
-				border-left:0;
-			}
-		}
-	}
-}
-
-@media all and (max-width:$lg) {
-	.btn {
-		&-fw {
-			&:before {
-				width:20px;
-			}
-		}
-		&-start {
-			justify-content:center;
-			&.btn-fw {
-				padding-left:20px;
-			}
-		}
-		&-end {
-			justify-content:center;
-			&.btn-fw {
-				padding-right:20px;
-			}
-		}
 	}
 }
 
 @media all and (max-width:$sm) {
 	.btn {
 		width:100%;
-		&-fw {
-			width:auto;
-		}
 	}
 }
 

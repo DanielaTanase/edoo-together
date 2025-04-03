@@ -1,0 +1,42 @@
+[data-label-btn] {
+	input[type='checkbox'] + & {
+		display:none;
+		&:before {
+			content:none;
+		}
+		&:after {
+			content:none;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			margin:0;
+			border-radius:inherit;
+			background:inherit;
+			@extend %overlay;
+		}
+	}
+}
+
+@media all and (max-width:$sm) {
+	[data-label-btn] {
+		input[type='checkbox'] + & {
+			display:flex;
+		}
+	}
+	.filters {
+		display: none;
+	}
+	#filters {
+		&:checked {
+			~ .filters {
+				display: block;
+			}
+			~ [data-label-btn] {
+				&:after {
+					content:attr(data-label-btn);
+					background:$purple_dark;
+				}
+			}
+		}
+	}
+}
