@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "sass src/sass:bin/css",
-    "watch": "sass --watch src/sass:bin/css",
+    "start": "sass --watch src/sass:dist/css --style=compressed & cd ./dist && live-server --port=7000 --ignore=css/sass,css/style.css.map",
+    "compile": "sass src/sass:dist/css",
+    "watch": "sass --watch src/sass:dist/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,6 +16,7 @@
   "author": "Daniela Tanase",
   "license": "ISC",
   "dependencies": {
+    "live-server": "^1.2.2",
     "sass": "^1.86.1"
   }
 }

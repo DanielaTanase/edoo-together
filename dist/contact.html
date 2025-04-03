@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+	<title>Contact</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<nav>
+				<a href="#home">Home</a>
+				<div class="subnav">
+					<button class="subnavbtn">About</button>
+					<div class="subnav-content">
+						<a href="#company">Company</a>
+						<a href="#team">Team</a>
+						<a href="#careers">Careers</a>
+					</div>
+				</div>
+				<div class="subnav">
+					<button class="subnavbtn">Services</button>
+					<div class="subnav-content">
+						<a href="#bring">Bring</a>
+						<a href="#deliver">Deliver</a>
+						<a href="#package">Package</a>
+						<a href="#express">Express</a>
+					</div>
+				</div>
+				<div class="subnav">
+					<button class="subnavbtn">Partners</button>
+					<div class="subnav-content">
+						<a href="#link1">Link 1</a>
+						<a href="#link2">Link 2</a>
+						<a href="#link3">Link 3</a>
+						<a href="#link4">Link 4</a>
+					</div>
+				</div>
+				<a href="#contact">Contact</a>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="">
+			<div class="col-5 col-tb-5 col-mb-12">
+				<div class="">
+					<h1 class="">EDOO</h1>
+					<p class=""><span class="section4Span">Head Office:</span> Herastrau Street, Bucharest, Romania</p>
+					<div class="section4phone">
+						<p class="section4contactLinks"><span class="section4Span">Phone:</span>
+							<a href="tel:+40735284346" class="contactsPhone">+40735284346</a>
+						</p>
+					</div>
+					<div class="section4mail">
+						<p class="section4contactLinks"><span class="section4Span">E-mail:</span>
+							<a href="mailto:contact@edoo.ro" class="contact-email">contact@edoo.ro</a>
+						</p>
+					</div>
+					<div class="section4website">
+						<p class="section4contactLinks"><span class="section4Span">Web:</span>
+							<a href="http://www.sbc-logistics.ro" class="website">www.sbc-logistics.ro</a>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-2">
+						<div class="SMIcon">
+							<img src="./Media/FB.svg" alt="" width="14" height="25" />
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="SMIcon">
+							<img src="./Media/Linkedin.svg" alt="" width="25" height="25" />
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="SMIcon">
+							<img src="./Media/Insta.svg" alt="" width="25" height="25" />
+						</div>
+					</div>
+				</div>
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2846.896663083853!2d26.10626756287105!3d44.47629088818763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStrada%20Gara%20Her%C4%83str%C4%83u%202%20sbc!5e0!3m2!1sen!2sro!4v1712138000043!5m2!1sen!2sro" width="600" height="450" class="googleMap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="btnSeeMap">
+					<button type="button" class="seeMap">See full map</button>
+				</div>
+			</div>
+			<div class="col-6 col-tb-6 col-mb-12" id="form">
+				<div class="form">
+					<form action="submit.php" method="get">
+						<label for="fname">First Name:</label><br>
+						<input type="text" name="fname" id="fname" placeholder="First Name" required><br>
+						<label for="lname">Last Name:</label><br>
+						<input type="text" name="lname" id="lname" placeholder="Last Name" required><br>
+						<label for="email">E-mail:</label><br>
+						<input type="email" name="email" id="email" placeholder="E-mail Leave your message here" required><br>
+						<label for="phone">Phone:</label><br>
+						<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="07********" required><br>
+						<label for="textarea">Message:</label><br>
+						<textarea name="textarea" id="textarea" required>Leave your message here</textarea>
+						<div class="row" id="formFooter">
+							<div class="col-8 col-tb-8">
+								<div class="agreement">
+									<input type="checkbox" name="terms" value="Agree" id="defaultCheckbox" required>
+									<label for="defaultCheckbox" class="checkboxLabel">
+										<span class="checkboxCustom"></span>
+										<span class="IAgreeWith">&#160;&#160;&#160;&#160;I agree with <span class="spanLabelTerms">Terms & Conditions</span></span>
+									</label>
+								</div>
+							</div>
+							<div class="col-4 col-tb-4 sendBtn">
+								<input type="submit" value="Send" class="send">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

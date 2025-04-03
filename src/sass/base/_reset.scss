@@ -1,0 +1,132 @@
+html, body {
+	width:100%;
+	min-width:320px;
+	height:100%;
+	min-height:100%;
+	margin:0;
+	padding:0;
+	background:$bg_body;
+	color:$color_body;
+	font-family:$font;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	@include box-sizing(border-box);
+	@include text-size-adjust;
+}
+*, *::before, *::after {
+	box-sizing:inherit;
+}
+::-moz-selection {
+	background:$color_body;
+	color:$bg_body;
+}
+::selection {
+	background:$color_body;
+	color:$bg_body;
+}
+img::-moz-selection {
+	background:transparent;
+}
+img::selection {
+	background:transparent;
+}
+img {
+	display:block;
+	max-width:100%;
+	height:auto;
+	border:0;
+	@include user-select-none;
+}
+mark {
+	background:transparent;
+	color:$purple;
+}
+a, a:hover, a:focus {
+	text-decoration:none;
+	cursor:pointer;
+}
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+	display:block;
+}
+blockquote, dl, figure, hr, menu, ol, p, pre, summary, table, ul {
+	margin:0;
+	padding:0;
+}
+ol, ul {
+	list-style:none;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin:0;
+	padding:0;
+	font-weight:normal;
+}
+fieldset, legend {
+	margin:0;
+	padding:0;
+	border:0;
+}
+label {
+	touch-action:manipulation;
+}
+button, input, select, textarea, progress {
+	margin:0;
+	border-radius:0;
+	overflow:hidden;
+	touch-action:manipulation;
+	@include box-sizing(border-box);
+	-webkit-appearance:none;
+	appearance:none;
+}
+input::-webkit-date-and-time-value {
+	line-height:43px;
+	text-align:left;
+}
+button, select {
+	text-transform:none;
+	cursor:pointer;
+}
+select::-ms-expand {
+	display:none;
+}
+select:-moz-focusring {
+	color:transparent;
+	text-shadow:0 0 0 $color_body;
+}
+button {
+	margin:0;
+	padding:0;
+	border:0;
+	border-radius:0;
+	background:none;
+}
+button[disabled], input[disabled] {
+	cursor:default;
+}
+input[type='checkbox'], input[type='image'], input[type='radio'] {
+	display:inline-block;
+	width:auto;
+	cursor:pointer;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding:0;
+	border:0;
+}
+textarea {
+	resize:none;
+}
+table {
+	border-spacing:0;
+	border-collapse:collapse;
+	empty-cells:show;
+}
+iframe, video {
+	max-width:100%;
+}
+svg, svg use {
+	pointer-events:none;
+}
+abbr {
+	cursor:help;
+}
+* {
+	outline:none;
+}

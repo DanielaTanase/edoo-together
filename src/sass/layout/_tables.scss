@@ -1,0 +1,35 @@
+table {
+	table-layout:auto;
+	width:100%;
+	margin:0 0 20px;
+	border:0;
+	color:$black;
+	font-size:16px;
+	text-align:left;
+	tr {
+		background:$grey_lighter;
+		&:nth-child(2n) {
+			background:$white;
+		}
+		th {
+			padding:20px;
+			border:0;
+			background:$yellow;
+			color:$black;
+			font-weight:500;
+			text-transform:uppercase;
+		}
+		td {
+			padding:20px;
+			border:0;
+			font-weight:300;
+		}
+	}
+}
+
+@media all and (max-width:$xs) {
+	.table-wrapper {
+		margin-right:-20px;
+		margin-left:-20px;
+	}
+}

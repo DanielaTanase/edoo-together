@@ -1,0 +1,23 @@
+.screen-reader-text {
+	display:none;
+}
+@media all and (min-width:($lg + 1)) {
+	.hide {
+		display:none!important;
+	}
+}
+@media all and (min-width:($md + 1)) {
+	.hide-lg {
+		display:none!important;
+	}
+}
+@media all and (min-width:($sm + 1)) {
+	.hide-md {
+		display:none!important;
+	}
+}
+@media all and (min-width:($xs + 1)) {
+	.hide-sm {
+		display:none!important;
+	}
+}

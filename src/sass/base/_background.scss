@@ -1,0 +1,133 @@
+.bg {
+	&-black {
+		background-color:$black;
+		color:$white;
+	}
+	&-black-light {
+		background-color:$black_light;
+		color:$white;
+	}
+	&-grey {
+		background-color:$grey;
+		color:$white;
+	}
+	&-grey-dark {
+		background-color:$grey_dark;
+		color:$white;
+	}
+	&-grey-light {
+		background-color:$grey_light;
+	}
+	&-grey-lighter {
+		background-color:$grey_lighter;
+	}
+	&-grey-lightest {
+		background-color:$grey_lightest;
+	}
+	&-white {
+		background-color:$white;
+		color:$black;
+	}
+	&-white-alt {
+		background-color:$white_alt;
+		color:$black;
+	}
+	&-yellow {
+		background-color:$yellow;
+		color:$black;
+	}
+	&-orange {
+		background-color:$orange;
+		color:$white;
+	}
+	&-red {
+		background-color:$red;
+		color:$white;
+	}
+	&-purple {
+		background-color:$purple;
+	}
+	&-purple {
+		background-color: $purple_light;
+	}
+	&-green-dark {
+		background-color:$green_dark;
+		color:$white;
+	}
+	&-green {
+		background-color:$green;
+		color:$white;
+	}
+	&-blue-dark {
+		background-color:$blue_dark;
+	}
+	&-blue {
+		background-color:$blue;
+	}
+	&-turquoise {
+		background-color:$turquoise;
+	}
+}
+
+.color {
+	&-black {
+		color:$black;
+	}
+	&-black-light {
+		color:$black_light;
+	}
+	&-grey {
+		color:$grey;
+	}
+	&-grey-dark {
+		color:$grey_dark;
+	}
+	&-grey-light {
+		color:$grey_light;
+	}
+	&-grey-lighter {
+		color:$grey_lighter;
+	}
+	&-grey-lightest {
+		color:$grey_lightest;
+	}
+	&-white {
+		color:$white;
+	}
+	&-white-alt {
+		color:$white_alt;
+	}
+	&-yellow {
+		color:$yellow;
+	}
+	&-orange {
+		color:$orange;
+	}
+	&-red {
+		color:$red;
+	}
+	&-purple {
+		color:$purple;
+	}
+	&-purple-light {
+		color:$purple_light;
+	}
+	&-mint {
+		color:$mint;
+	}
+	&-green-dark {
+		color:$green_dark;
+	}
+	&-green {
+		color:$green;
+	}
+	&-blue-dark {
+		color:$blue_dark;
+	}
+	&-blue {
+		color:$blue;
+	}
+	&-turquoise {
+		color:$turquoise;
+	}
+}

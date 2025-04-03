@@ -1,0 +1,27 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/align';
+@import 'base/background';
+
+@import 'layout/flexbox';
+@import 'layout/hide';
+@import 'layout/forms';
+@import 'layout/header';
+@import 'layout/lists';
+@import 'layout/tables';
+@import 'layout/pagination';
+@import 'layout/slider';
+@import 'layout/swiper';
+
+@import 'pages/index';
+@import 'pages/contact';
+@import 'pages/gallery';
+
+
+@import 'components/buttons';
+
+

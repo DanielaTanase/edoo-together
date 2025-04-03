@@ -1,0 +1,27 @@
+.pagination {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 0 20px;
+	.page-numbers {
+		margin:0 10px;
+		color:$grey_light;
+		font-size:16px;
+		font-weight:400;
+		font-style:italic;
+		line-height:30px;
+		&:hover, &:focus {
+			color:$yellow;
+		}
+		&.current {
+			color:$blue;
+			pointer-events:none;
+		}
+		&.next, &.prev {
+			color:$grey_light;
+			&:hover, &:focus {
+				color:$yellow;
+			}
+		}
+	}
+}
