@@ -1,53 +1,9 @@
 body {
-	padding-top: 90px;
-}
-
-.edoo-header-middle-section {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-	flex: 1;
-	margin:auto;
-	max-width: 1220px;
-}
-.search-bar {
-	flex:1;
-	height: 44px;
-	padding-left: 10px;
-	font-size: 16px;
-	border: 1px solid $grey_lightest;
-	border-radius: 5px;
-	box-shadow: inset 1px 2px 3px $white_alt;
-	width: 0;
-}
-
-.search-button {
-	height: 44px;
-	width: 66px;
-	background-color: $white_alt;
-	border: 1px solid $grey_lighter;
-	margin-left: -10px;
-	margin-right: 10px;
-	cursor: pointer;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	position: relative;
-	&:hover {
-		background-color: $purple_light_opacity_7;
+	padding-top: 80px;
+	.clear {
+		width:100%;
+	}
+	.article {
+		border-bottom-color: $purple_dark;
 	}
 }
-
-
-
-.search-bar::placeholder {
-	font-size: 16px
-}
-
-.search-icon {
-	height: 25px;
-	margin-top: 4px;
-	cursor: pointer;
-}
-

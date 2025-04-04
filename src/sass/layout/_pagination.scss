@@ -17,7 +17,7 @@
 			pointer-events:none;
 		}
 		&.next, &.prev {
-			color:$grey_light;
+			color:$grey;
 			&:hover, &:focus {
 				color:$purple;
 			}
