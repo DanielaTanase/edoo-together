@@ -15,7 +15,7 @@ button, .btn {
 	text-decoration:none;
 	&:hover,
 	&:focus {
-		background:$purple;
+		background:$purple_dark;
 		color:$white;
 	}
 }
@@ -64,10 +64,17 @@ button, .btn {
 		min-width:none;
 	}
 	&-outline {
-		border:1px solid $black;
-		background:$white;
-		color:$black;
-		text-transform:uppercase;
+		border:1px solid $purple;
+		background:none;
+		color:$purple;
+		&:hover {
+			background:$purple_light;
+			color:$purple;
+		}
+		&:focus {
+			background:none;
+			color:$purple;
+		}
 	}
 }
 
@@ -76,4 +83,3 @@ button, .btn {
 		width:100%;
 	}
 }
-

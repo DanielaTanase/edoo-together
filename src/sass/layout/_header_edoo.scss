@@ -8,6 +8,7 @@
 	}
 	.menu-sm {
 		display: none;
+		cursor: pointer;
 	}
 	.navbar-sm {
 		display: none;
@@ -22,9 +23,12 @@
 	.menu-item {
 		min-width: 100px;
 		margin-top: 0;
-		padding: 10px 20px;
 		color: $purple_dark;
 		text-align: center;
+		> a {
+			display: block;
+			padding: 10px 20px;
+		}
 		a {
 			color: $purple_dark;
 		}
@@ -142,14 +146,16 @@
 	}
 	.profil {
 		display: none;
-		padding-top: 10px;
+		cursor: pointer;
 	}
 }
+
 @media all and (max-width:$sm) {
 	.header {
 		.menu-sm {
-			display:block;
-			margin-right: 10vw;
+			display:flex;
+			justify-content:center;
+			align-items:center;
 		}
 		.navbar-sm {
 			position: absolute;
@@ -197,10 +203,9 @@
 			}
 		}
 		.profil {
-			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }
-
-
-

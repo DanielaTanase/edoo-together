@@ -116,11 +116,6 @@ address {
 	font-weight:900;
 }
 
-.section-title {
-	font-size:60px;
-	line-height:65px;
-}
-
 @media all and (max-width:$md) {
 	h1, .h1 {
 		font-size:30px;
@@ -141,24 +136,5 @@ address {
 	h5, .h5 {
 		font-size:16px;
 		line-height:20px;
-	}
-	.section-title {
-		font-size:48px;
-		line-height:55px;
-	}
-}
-
-
-@media all and (max-width:$sm) {
-	.section-title {
-		font-size:36px;
-		line-height:40px;
-	}
-}
-
-@media all and (max-width:$xs) {
-	.section-title {
-		font-size:30px;
-		line-height:35px;
 	}
 }

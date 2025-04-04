@@ -22,6 +22,7 @@
 		}
 	}
 	.footerP {
+		padding:10px 0;
 		color:$white;
 		font-size: 12px;
 		text-align: left;
@@ -39,9 +40,11 @@
 		background-color:$purple;
 		width: 100%;
 		max-width: 1920px;
+		height: 1px;
 		padding: 0;
 		margin-left: 0;
 		margin-right: 0;
+		border: 0;
 	}
 	.rights {
 		height: 40px;
@@ -55,7 +58,6 @@
 	}
 	.subheadingFooter {
 		color:$white;
-		font-size: 26px;
 		font-weight: 600;
 	}
 	.title {
@@ -66,14 +68,13 @@
 	}
 }
 
-
 @media all and (max-width:$sm) {
 	.footer {
 		.col-8 {
-			&.flex{
+			&.flex {
 				padding: 0;
 			}
-	}
+		}
 		.no-padding-sm {
 			padding: 0;
 		}
@@ -109,6 +110,7 @@
 		}
 	}
 }
+
 @media all and (max-width:$xs) {
 	.footer {
 		.col-8 {
@@ -119,12 +121,9 @@
 		}
 		.services {
 			margin-right: 0;
-			text-align: center;
 		}
 		.no-padding-sm {
 			display:none;
 		}
 	}
 }
-
-

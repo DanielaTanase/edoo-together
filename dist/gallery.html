@@ -1,48 +1,51 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<!doctype html>
+<html lang="en">
 
 <head>
-	<title>EDOO</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<title>EDOO</title>
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<meta name="apple-mobile-web-app-title" content="Edoo">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 	<header class="header">
 		<div class="container container-height">
 			<div class="container-flex">
-				<div class="menu-sm">
-					<img src="images/menu-icon3.svg" width="60" height="60" alt="menu" />
+				<div class="menu-sm trigger" data-dest=".navbar-sm">
+					<img src="images/menu-icon3.svg" width="60" height="60" alt="menu">
 				</div>
 				<nav class="navbar-sm">
 					<ul class="menu">
 						<li class="menu-item menu-item-sm link-sm">
-							<a href=" gallery.html">Gallery</a>
+							<a href="gallery.html">Gallery</a>
 						</li>
 						<li class="menu-item menu-item-sm">
-							Services
+							<a href="#">Services</a>
 							<ul class="subnav-content-sm">
-								<li class="subnav-item-sm"><a href="#bring">Bring</a></li>
-								<li class="subnav-item-sm"><a href="#deliver">Deliver</a></li>
-								<li class="subnav-item-sm"><a href="#package">Package</a></li>
-								<li class="subnav-item-sm"><a href="#express">Express</a></li>
+								<li class="subnav-item-sm"><a href="#">B2B</a></li>
+								<li class="subnav-item-sm"><a href="#">Online</a></li>
+								<li class="subnav-item-sm"><a href="#">Package</a></li>
+								<li class="subnav-item-sm"><a href="#">Express</a></li>
 							</ul>
 						</li>
 
 						<li class="menu-item menu-item-sm">
-							Partners
+							<a href="#">Partners</a>
 							<ul class="subnav-content-sm">
-								<li class="subnav-item-sm"><a href="#link1">Link 1</a></li>
-								<li class="subnav-item-sm"><a href="#link2">Link 2</a></li>
-								<li class="subnav-item-sm"><a href="#link3">Link 3</a></li>
-								<li class="subnav-item-sm"><a href="#link4">Link 4</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 1</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 2</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 3</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 4</a></li>
 							</ul>
 						</li>
 						<li class="menu-item menu-item-sm link-sm">
@@ -51,8 +54,8 @@
 					</ul>
 				</nav>
 				<div class="logo-one">
-					<a class="logo-header" href=" index.html" target="_blank">
-						<img src="images/edoo.svg" width="80" height="80" alt="edoo" />
+					<a class="logo-header" href="index.html">
+						<img src="images/edoo.svg" width="80" height="80" alt="edoo">
 					</a>
 				</div>
 				<nav class="navbar">
@@ -61,17 +64,17 @@
 							<a href="gallery.html">Gallery</a>
 						</li>
 						<li class="menu-item">
-							Services
+							<a href="#">Services</a>
 							<ul class="subnav-content">
-								<li class="subnav-item"><a href="#bring">Bring</a></li>
-								<li class="subnav-item"><a href="#deliver">Deliver</a></li>
-								<li class="subnav-item"><a href="#package">Package</a></li>
-								<li class="subnav-item"><a href="#express">Express</a></li>
+								<li class="subnav-item"><a href="#">B2B</a></li>
+								<li class="subnav-item"><a href="#">Online</a></li>
+								<li class="subnav-item"><a href="#">Package</a></li>
+								<li class="subnav-item"><a href="#">Express</a></li>
 							</ul>
 						</li>
 
 						<li class="menu-item">
-							Partners
+							<a href="#">Partners</a>
 							<ul class="subnav-content">
 								<li class="subnav-item"><a href="#link1">Link 1</a></li>
 								<li class="subnav-item"><a href="#link2">Link 2</a></li>
@@ -85,15 +88,182 @@
 					</ul>
 				</nav>
 				<div class="buttons">
-					<button class="users-btn font-weight-900 log-in-btn" disabled>Log in</button>
-					<button class="users-btn font-weight-900 sign-up-btn" disabled>Sign up</button>
+					<button class="users-btn font-weight-700 log-in-btn" disabled>Log in</button>
+					<button class="users-btn font-weight-700 sign-up-btn" disabled>Sign up</button>
 				</div>
-				<div class="profil">
-					<img src="images/profile_icon.svg" width="60" height="60" alt="edoo" />
+				<div class="profil trigger" data-dest=".buttons">
+					<img src="images/profile_icon.svg" width="60" height="60" alt="edoo">
 				</div>
 			</div>
 		</div>
 	</header>
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="flex">
+					<div class="col-5 col-sm-12">
+						<div class="swiper-gallery">
+							<div class="swiper-container gallery-main">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=1" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=2" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=3" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=4" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=5" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=6" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=7" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=8" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=9" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=10" alt="" width="300" height="300" loading="lazy">
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+							<div class="swiper-container gallery-thumbs">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=1" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=2" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=3" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=4" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=5" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=6" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=7" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=8" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=9" alt="" width="300" height="300" loading="lazy">
+									</div>
+									<div class="swiper-slide">
+										<img src="https://picsum.photos/300/300?random=10" alt="" width="300" height="300" loading="lazy">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-7 col-sm-12">
+						<div class="h3">
+							<h1 class="h3 article-title">Practical Node.js Course</h1>
+							<p class="article-subtitle">Get started with Node.js and create your first application.</p>
+							<div><span class="tag tag-grey">Spanish</span><span class="tag tag-grey">German</span><span class="tag tag-grey">French</span><span class="tag tag-grey">Italian</span></div>
+							<div><span class="tag">Node.js</span></div>
+							<div><span class="tag tag-purple-dark">Beginner</span></div>
+							<span class="article-author">Alice Johnson, Bob Brown, John Doe</span>
+							<span class="article-price"><del>159.99€</del><span class="tag tag-green">FREE</span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class=" container">
+			<div class="flex flex-middle">
+				<div class="col-8 col-xs-12 flex">
+					<div class="services">
+						<div class="title">
+							<div class="h3 subheadingFooter">Services</div>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">B2B</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Online</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Package</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Express</a>
+						</div>
+					</div>
+					<div class="services">
+						<div class="title">
+							<div class="h3 subheadingFooter">Partners</div>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 1</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 2</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 3</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 4</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-start no-padding-sm">
+					<figure class="logo-footer">
+						<img src="images/edoo-footer.svg" alt="Edoo">
+					</figure>
+				</div>
+				<div class="col-12 col-center-md">
+					<p class="contact">Contact:
+						<a href="tel:0735284346" class="footer-menu-list-item-link">0735.284.346</a>
+						<span> &#124;</span>
+						<a href="mailto:contact@edoo.ro" class="footer-menu-list-item-link"> contact@edoo.ro</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<hr class="footerRights">
+		<div class="container">
+			<div class=" flex">
+				<div class="col-6 col-sm-12">
+					<p class="footerP">
+						<a href="#" class="footerLink">GDPR</a>
+						<span class="footer-span">&#124;</span>
+						<a href="#" class="footerLink">Privacy Policy</a>
+						<span class="footer-span">&#124;</span>
+						<a href="#" class="footerLink">RMA</a>
+					</p>
+				</div>
+				<div class="col-6 col-sm-12">
+					<p class="footerP footerP-second"> &#169; 2025 All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.bundle.js"></script>
+
 </body>
 
 </html>

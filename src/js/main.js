@@ -24,16 +24,16 @@ const renderMarkup = (input, index = 1) => {
 		const markup = `
 			<article class="article">
 				<figure class="article-thumb">
-					<a href="article.html"><img src="${item.image}" alt="${item.title}" width="300" height="300" loading="lazy"></a>
+					<a href="gallery.html"><img src="${item.image}" alt="${item.title}" width="300" height="300" loading="lazy"></a>
 				</figure>
 				<div class="article-content h4">
-					<h3 class="h4 article-title"><a href="article.html">${item.title}</a></h3>
+					<h3 class="h4 article-title"><a href="gallery.html">${item.title}</a></h3>
 					<p class="article-subtitle">${item.description}</p>
 					<div>${item.language.map(tag => `<span class="tag tag-grey">${tag}</span>`).join('')}</div>
 					<div><span class="tag">${item.topic}</span></div>
 					<div><span class="tag tag-purple-dark">${item.level}</span></div>
 					<span class="article-author">${item.authors}</span>
-					<span class="article-price">${item.paid ? item.price : `<span class="tag tag-green">FREE</span>`}</span>
+					<span class="article-price">${item.paid ? item.price : `<del>${item.price}</del><span class="tag tag-green">FREE</span>`}</span>
 				</div>
 			</article>
 		`;
@@ -131,7 +131,9 @@ const paginationOffset = (result, index) => {
 	return result;
 }
 
-document.addEventListener('DOMContentLoaded', resetFilters);
+document.addEventListener('DOMContentLoaded', () => {
+	if (document.querySelector('#root')) resetFilters();
+});
 
 document.addEventListener('change', e => {
 	if (e.target.matches('.filter-input')) {
@@ -173,17 +175,17 @@ document.addEventListener('click', e => {
 		if (e.target.matches('.prev')) {
 			if (pagination.current > 1) {
 				renderMarkup(result, pagination.current - 1);
-				window.scrollTo(0, 0);
+				document.getElementById('scroll-anchor').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
 			}
 		} else if (e.target.matches('.next')) {
 			if (pagination.current < pagination.count) {
 				renderMarkup(result, pagination.current + 1);
-				window.scrollTo(0, 0);
+				document.getElementById('scroll-anchor').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
 			}
 		} else {
 			if (pagination.current !== parseInt(e.target.textContent)) {
 				renderMarkup(result, parseInt(e.target.textContent));
-				window.scrollTo(0, 0);
+				document.getElementById('scroll-anchor').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
 			}
 		}
 	}
@@ -196,6 +198,22 @@ document.addEventListener('change', () => {
 document.addEventListener('click', e => {
 	if (e.target.matches('.filter-reset')) {
 		resetFilters();
+	}
+});
+
+document.addEventListener('click', e => {
+	if (e.target.closest('.dropdown-selection')) {
+		let trigger = e.target;
+		let dest = e.target.closest('.dropdown');
+		if (dest) {
+			if (trigger.classList.contains('inactive')) {
+				trigger.classList.remove('inactive');
+				dest.classList.remove('inactive');
+			} else {
+				trigger.classList.add('inactive');
+				dest.classList.add('inactive');
+			}
+		}
 	}
 });
 
@@ -274,3 +292,70 @@ document.addEventListener('click', e => {
 	if (e.target.matches('.slide-prev')) moveSlide(-1);
 	if (e.target.matches('.slide-next')) moveSlide(1);
 });
+
+
+// SWIPER
+import Swiper, { Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
+
+function swiper({
+	element,
+	options,
+	nav = {}
+} = {}) {
+
+	var $element = document.querySelector(element),
+		$elements = document.querySelectorAll(element);
+
+	this.initSwiper = function() {
+		if ($element == null) return false;
+
+		var swiper = null,
+			swiperInstance = null;
+
+		options = Object.assign({}, options, { modules: [Navigation, Pagination, EffectFade, Autoplay, Thumbs] })
+
+		if (nav.hasOwnProperty('element') && nav.hasOwnProperty('options')) {
+			for (let i = 0; i < $elements.length; i++) {
+				var swiperNav = new Swiper(document.querySelectorAll(nav.element)[i], nav.options),
+					thumbsNav = {
+						thumbs: {
+							swiper: swiperNav
+						}
+					};
+				options = Object.assign({}, options, thumbsNav);
+				swiper = new Swiper($elements[i], options);
+			}
+			return false;
+		}
+
+		swiper = new Swiper(element, options);
+	}
+
+}
+
+var swiperGalleryOptions = {
+	element: '.swiper-gallery .gallery-main',
+	options: {
+		rewind: true,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		navigation: {
+			nextEl: '.swiper-gallery .gallery-main .swiper-button-next',
+			prevEl: '.swiper-gallery .gallery-main .swiper-button-prev',
+		}
+	},
+	nav: {
+		element: '.swiper-gallery .gallery-thumbs',
+		options: {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true
+		}
+	}
+}
+var swiperGalleryModule = new swiper(swiperGalleryOptions);
+swiperGalleryModule.initSwiper();

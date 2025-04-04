@@ -1,42 +1,9 @@
-.section-notices {
-	&-error {
-		ul, ol {
-			li {
-				&:before {
-					background:$red;
-				}
-				a {
-					color:$red;
-					&:hover, &:focus {
-						color:$red;
-					}
-				}
-			}
-		}
-	}
-}
-
 .form-element {
 	position:relative;
 	margin-bottom:20px;
 	font-size:16px;
 	font-weight:400;
 	line-height:20px;
-}
-
-[data-error] {
-	position:relative;
-	&:after {
-		content:attr(data-error);
-		display:block;
-		margin-top:-10px;
-		color:$red;
-		font-family:$font;
-		font-size:14px;
-		font-weight:300;
-		text-align:left;
-		@extend %ellipsis;
-	}
 }
 
 label {
@@ -194,177 +161,46 @@ textarea {
 	}
 }
 
-.quantity,
-.cart-item-product-quantity {
-	position:relative;
-	display:inline-flex;
-	flex-direction:column;
-	justify-content:center;
-	align-items:stretch;
-	flex:0 0 auto;
-	width:40px;
-	height:60px;
-	margin:0;
-	input {
-		flex:0 0 auto;
-		width:100%;
-		height:20px;
-		margin:0;
-		padding:0;
-		border:0;
-		font-weight:900;
-		text-align:center;
-	}
-	.btn {
-		&-increase, &-decrease {
-			display:flex;
-			justify-content:center;
-			align-items:center;
-			flex:0 0 auto;
-			width:100%;
-			height:20px;
-			margin:0;
-			padding:0;
-			border:0;
-			border-radius:0;
-			background:none;
-			&:hover, &:focus {
-				background:none;
-			}
-			&:after {
-				content:'';
-				width:10px;
-				height:20px;
-				background:url('../images/icon-arrows.svg') left center / 20px no-repeat;
-				transform:rotate(90deg);
-			}
-		}
-		&-decrease {
-			&:after {
-				background-position:right center;
-			}
-		}
-	}
-	+ .btn {
-		margin-left:10px;
+.edoo-header-middle-section {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex: 1;
+	margin:auto;
+	max-width: 1220px;
+}
+.search-bar {
+	flex:1;
+	height: 44px;
+	font-size: 16px;
+	border: 1px solid $grey_lighter;
+	border-radius: 5px 0 0 5px;
+	box-shadow: inset 1px 2px 3px $white_alt;
+	width: 0;
+}
+
+.search-button {
+	height: 44px;
+	width: 66px;
+	background-color: $white_alt;
+	border: 1px solid $grey_lighter;
+	border-left:0;
+	cursor: pointer;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	position: relative;
+	&:hover, &:focus {
+		background-color: $purple_light_opacity_7;
 	}
 }
 
-.strength {
-	display:flex;
-	align-items:center;
-	border-radius:10px;
-	background:$black;
-	z-index:1;
-	label {
-		justify-content:center;
-		flex:1;
-		margin:0;
-	}
-	input {
-		&[type='radio'], &[type='checkbox'] {
-			+ label, + span {
-				justify-content:center;
-				flex:1;
-				margin:0;
-				padding:10px 0;
-				border-radius:10px;
-				color:$white;
-				text-align:center;
-				&:before {
-					content:none;
-				}
-				span {
-					display:none;
-				}
-			}
-			&:checked {
-				+ label, + span {
-					background:$purple;
-					color:$black;
-				}
-			}
-		}
-	}
+.search-bar::placeholder {
+	font-size: 16px
 }
 
-.form-order {
-	display:flex;
-	align-items:center;
-	margin-bottom:40px;
-}
-
-.subscribe {
-	.form-element {
-		margin:0;
-	}
-	input {
-		margin:0;
-		padding:0 15px;
-		border:0;
-		background:$grey_light;
-		color:$black;
-		@include placeholder {
-			color:$grey;
-			opacity:1;
-		}
-	}
-	button {
-		margin:0;
-		background:$purple;
-		color:$black;
-	}
-	[data-error] {
-		&:after {
-			position:absolute;
-			bottom:-20px;
-		}
-	}
-}
-
-@media all and (min-width:($xs + 1)) {
-	.billing-address,
-	.shipping-address {
-		flex-flow:row wrap;
-		align-items:flex-start;
-		margin-right:-10px;
-		margin-left:-10px;
-		.form-element {
-			flex-basis:calc(50% - 20px);
-			margin-right:10px;
-			margin-left:10px;
-			&[data-priority='-1'] {
-				flex-basis:100%;
-			}
-		}
-	}
-	.billing-address {
-		display:flex;
-	}
-	.shipping-address {
-		display:none;
-		&.active {
-			display:flex;
-		}
-	}
-}
-
-@media all and (max-width:$md) {
-	.subscribe {
-		.form-element {
-			margin:20px 0 0;
-		}
-		button {
-			margin:20px 0 0;
-		}
-	}
-}
-
-@media all and (max-width:$xs) {
-	.shipping-address {
-		display:none;
-		&.active {
-			display:block;
-		}
-	}
+.search-icon {
+	height: 25px;
+	cursor: pointer;
 }

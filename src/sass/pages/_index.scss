@@ -3,7 +3,57 @@ body {
 	.clear {
 		width:100%;
 	}
-	.article {
-		border-bottom-color: $purple_dark;
+}
+
+section, .section {
+	padding:60px 0 40px;
+}
+
+#scroll-anchor {
+	margin-top:-100px;
+	margin-bottom:100px;
+}
+
+.dropdown {
+	&.inactive {
+		.dropdown-list {
+			display:none;
+		}
+		.dropdown-selection {
+			&:after {
+				bottom:-14px;
+				transform:rotateX(-180deg);
+			}
+		}
+	}
+	&-selection {
+		position:relative;
+		width:100%;
+		border-bottom:2px solid $purple;
+		border-radius:0;
+		background:none;
+		color:$black;
+		font-weight:700;
+		text-align:left;
+		overflow:visible;
+		&:hover, &:focus {
+			background:none;
+			color:$black;
+		}
+		&:after {
+			content:'';
+			position:absolute;
+			right:0;
+			bottom:-20px;
+			width:32px;
+			height:32px;
+			background:$white url('../images/icon-dropdown.svg') left -4px top -1px no-repeat;
+		}
+	}
+}
+
+@media all and (max-width:$sm) {
+	section, .section {
+		padding:40px 0 20px;
 	}
 }

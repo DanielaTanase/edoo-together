@@ -4,19 +4,18 @@
 
 @import 'base/reset';
 @import 'base/typography';
-@import 'base/align';
-@import 'base/background';
+
+@import 'components/buttons';
 
 @import 'layout/flexbox';
 @import 'layout/hide';
 @import 'layout/forms';
 @import 'layout/footer';
 @import 'layout/header';
-@import 'layout/header-edoo';
+@import 'layout/header_edoo';
 @import 'layout/lists';
 @import 'layout/tables';
 @import 'layout/pagination';
-@import 'layout/search-form';
 @import 'layout/slider';
 @import 'layout/swiper';
 @import 'layout/filters';
@@ -24,10 +23,3 @@
 @import 'layout/tags';
 
 @import 'pages/index';
-@import 'pages/contact';
-@import 'pages/gallery';
-
-
-@import 'components/buttons';
-
-
