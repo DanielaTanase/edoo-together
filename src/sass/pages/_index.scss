@@ -52,6 +52,20 @@ section, .section {
 	}
 }
 
+.swiper-section {
+	.swiper-main {
+		width: 100%;
+	}
+	.swiper-button-prev {
+		background-size: 20px auto
+	}
+	.swiper-button-next {
+		background-size: 20px auto;
+	}
+}
+
+
+
 @media all and (max-width:$sm) {
 	section, .section {
 		padding:40px 0 20px;
