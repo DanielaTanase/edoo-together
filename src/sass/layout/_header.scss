@@ -85,7 +85,7 @@
 						content:attr(title);
 						display:block;
 						height:0;
-						color:$yellow;
+						color:$purple;
 						font-weight:900;
 						overflow:hidden;
 						visibility:hidden;
@@ -120,7 +120,7 @@
 		text-transform:lowercase;
 		&:hover, &:focus {
 			background:transparent;
-			color:$yellow;
+			color:$purple;
 		}
 		&:before {
 			content:'';
@@ -157,7 +157,7 @@
 					content:attr(title);
 					display:block;
 					height:0;
-					color:$yellow;
+					color:$purple;
 					font-size:13px;
 					font-weight:900;
 					overflow:hidden;
@@ -215,7 +215,7 @@
 				content:attr(title);
 				display:block;
 				height:0;
-				color:$yellow;
+				color:$purple;
 				font-weight:900;
 				overflow:hidden;
 				visibility:hidden;
@@ -317,7 +317,7 @@
 				right:0;
 				width:10px;
 				height:20px;
-				background:url('../../images/icon-arrows.svg') right center / 20px no-repeat;
+				background:url('../images/icon-arrows.svg') right center / 20px no-repeat;
 				transform:rotate(90deg);
 				pointer-events:none;
 			}

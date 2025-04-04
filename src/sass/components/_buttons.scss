@@ -35,9 +35,6 @@ button, .btn {
 		border:1px solid $black;
 		background:$white;
 		color:$black;
-		&:after {
-			background-image:url('');
-		}
 	}
 	&-blue {
 		background:$blue;

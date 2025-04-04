@@ -1,0 +1,33 @@
+.tag {
+	display:inline-block;
+	vertical-align:top;
+	height:20px;
+	margin:0 1px;
+	padding:0 10px;
+	border-radius:10px;
+	background:$purple;
+	color:$white;
+	font-size:11px;
+	line-height:20px;
+	&-green {
+		background:$green;
+	}
+	&-red {
+		background:$red;
+	}
+	&-orange {
+		background:$orange;
+	}
+	&-yellow {
+		background:$yellow;
+	}
+	&-grey {
+		background:$grey_dark;
+	}
+	&-purple-dark {
+		background:$purple_dark;
+	}
+	&-purple-light {
+		background:$purple_light;
+	}
+}
