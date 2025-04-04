@@ -1,33 +1,3 @@
-%v-center-before {
-	height:100%;
-	&:before {
-		content:'';
-		display:inline-block;
-		vertical-align:middle;
-		width:1px;
-		height:100%;
-	}
-}
-%v-center-after {
-	height:100%;
-	&:after {
-		content:'';
-		display:inline-block;
-		vertical-align:middle;
-		width:1px;
-		height:100%;
-	}
-}
-%h-justify-after {
-	text-align:justify;
-	&:after {
-		content:'';
-		display:inline-block;
-		vertical-align:middle;
-		width:100%;
-		height:1px;
-	}
-}
 %overlay {
 	position:absolute;
 	top:0;

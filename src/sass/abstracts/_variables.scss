@@ -80,18 +80,6 @@ $purple_opacity_5:rgba(109,40,210,.5);
 $bg_body:$white;
 $color_body:$black;
 
-$facebook:#1877f2;
-$twitter:#1da1f2;
-$pinterest:#bd081c;
-$linkedin:#007bb5;
-$whatsapp:#25d366;
-
-$subscription_color_1:#a96dad;
-$subscription_color_2:#e5b517;
-$subscription_color_3:#de913c;
-$subscription_gradient:linear-gradient(to bottom, $subscription_color_1, $subscription_color_1 30%, $subscription_color_2 70%, $subscription_color_2 80%, $subscription_color_3);
-$about_gradient:linear-gradient(to bottom, $blue, $white);
-
 
 // FONTS
 $font:'Montserrat', sans-serif;
@@ -101,5 +89,3 @@ $font:'Montserrat', sans-serif;
 $index_max:99;
 $index_main:2;
 $index_footer:2;
-$index_gdpr:9999;
-$index_dialog:10000;

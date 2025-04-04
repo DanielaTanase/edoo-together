@@ -7,6 +7,7 @@
     "compile": "sass src/sass:dist/css --style=compressed & esbuild ./src/js/main.js --bundle --minify --outfile=./dist/js/main.bundle.js",
     "watch": "sass --watch src/sass:dist/css",
     "build": "esbuild ./src/js/main.js --bundle --outfile=./dist/js/main.bundle.js --watch",
+    "eslint": "npx eslint ./src/js/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,10 +17,12 @@
   "author": "Daniela Tanase",
   "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.2",
-    "sass": "1.79"
+    "sass": "1.79",
+    "swiper": "^8.0.6"
   },
   "devDependencies": {
-    "esbuild": "0.25.2"
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "live-server": "^1.2.2"
   }
 }

@@ -1,48 +1,51 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<!doctype html>
+<html lang="en">
 
 <head>
-	<title>EDOO</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<title>EDOO</title>
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<meta name="apple-mobile-web-app-title" content="Edoo">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 	<header class="header">
 		<div class="container container-height">
 			<div class="container-flex">
-				<div class="menu-sm">
-					<img src="images/menu-icon3.svg" width="60" height="60" alt="menu" />
+				<div class="menu-sm trigger" data-dest=".navbar-sm">
+					<img src="images/menu-icon3.svg" width="60" height="60" alt="menu">
 				</div>
 				<nav class="navbar-sm">
 					<ul class="menu">
 						<li class="menu-item menu-item-sm link-sm">
-							<a href=" gallery.html">Gallery</a>
+							<a href="gallery.html">Gallery</a>
 						</li>
 						<li class="menu-item menu-item-sm">
-							Services
+							<a href="#">Services</a>
 							<ul class="subnav-content-sm">
-								<li class="subnav-item-sm"><a href="#bring">Bring</a></li>
-								<li class="subnav-item-sm"><a href="#deliver">Deliver</a></li>
-								<li class="subnav-item-sm"><a href="#package">Package</a></li>
-								<li class="subnav-item-sm"><a href="#express">Express</a></li>
+								<li class="subnav-item-sm"><a href="#">B2B</a></li>
+								<li class="subnav-item-sm"><a href="#">Online</a></li>
+								<li class="subnav-item-sm"><a href="#">Package</a></li>
+								<li class="subnav-item-sm"><a href="#">Express</a></li>
 							</ul>
 						</li>
 
 						<li class="menu-item menu-item-sm">
-							Partners
+							<a href="#">Partners</a>
 							<ul class="subnav-content-sm">
-								<li class="subnav-item-sm"><a href="#link1">Link 1</a></li>
-								<li class="subnav-item-sm"><a href="#link2">Link 2</a></li>
-								<li class="subnav-item-sm"><a href="#link3">Link 3</a></li>
-								<li class="subnav-item-sm"><a href="#link4">Link 4</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 1</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 2</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 3</a></li>
+								<li class="subnav-item-sm"><a href="#">Link 4</a></li>
 							</ul>
 						</li>
 						<li class="menu-item menu-item-sm link-sm">
@@ -51,8 +54,8 @@
 					</ul>
 				</nav>
 				<div class="logo-one">
-					<a class="logo-header" href=" index.html" target="_blank">
-						<img src="images/edoo.svg" width="80" height="80" alt="edoo" />
+					<a class="logo-header" href="index.html">
+						<img src="images/edoo.svg" width="80" height="80" alt="edoo">
 					</a>
 				</div>
 				<nav class="navbar">
@@ -61,17 +64,17 @@
 							<a href="gallery.html">Gallery</a>
 						</li>
 						<li class="menu-item">
-							Services
+							<a href="#">Services</a>
 							<ul class="subnav-content">
-								<li class="subnav-item"><a href="#bring">Bring</a></li>
-								<li class="subnav-item"><a href="#deliver">Deliver</a></li>
-								<li class="subnav-item"><a href="#package">Package</a></li>
-								<li class="subnav-item"><a href="#express">Express</a></li>
+								<li class="subnav-item"><a href="#">B2B</a></li>
+								<li class="subnav-item"><a href="#">Online</a></li>
+								<li class="subnav-item"><a href="#">Package</a></li>
+								<li class="subnav-item"><a href="#">Express</a></li>
 							</ul>
 						</li>
 
 						<li class="menu-item">
-							Partners
+							<a href="#">Partners</a>
 							<ul class="subnav-content">
 								<li class="subnav-item"><a href="#link1">Link 1</a></li>
 								<li class="subnav-item"><a href="#link2">Link 2</a></li>
@@ -85,93 +88,122 @@
 					</ul>
 				</nav>
 				<div class="buttons">
-					<button class="users-btn font-weight-900 log-in-btn" disabled>Log in</button>
-					<button class="users-btn font-weight-900 sign-up-btn" disabled>Sign up</button>
+					<button class="users-btn font-weight-700 log-in-btn" disabled>Log in</button>
+					<button class="users-btn font-weight-700 sign-up-btn" disabled>Sign up</button>
 				</div>
-				<div class="profil">
-					<img src="images/profile_icon.svg" width="60" height="60" alt="edoo" />
+				<div class="profil trigger" data-dest=".buttons">
+					<img src="images/profile_icon.svg" width="60" height="60" alt="edoo">
 				</div>
 			</div>
 		</div>
 	</header>
 	<main>
-		<div class="">
-			<div class="col-5 col-tb-5 col-mb-12">
-				<div class="">
-					<h1 class="">EDOO</h1>
-					<p class=""><span class="section4Span">Head Office:</span> Herastrau Street, Bucharest, Romania</p>
-					<div class="section4phone">
-						<p class="section4contactLinks"><span class="section4Span">Phone:</span>
-							<a href="tel:+40735284346" class="contactsPhone">+40735284346</a>
+		<section class="section">
+			<div class="container">
+				<div class="flex">
+					<div class="col-6 col-sm-12">
+						<h1 class="font-weight-900">EDOO</h1>
+						<br>
+						<address>
+							<strong>Head Office:</strong><br>
+							Herastrau Street, Bucharest, Romania
+						</address>
+						<p>
+							<strong>Phone:</strong><br>
+							<a href="tel:+40735284346">+40735284346</a>
+						</p>
+						<p>
+							<strong>E-mail:</strong><br>
+							<a href="mailto:contact@edoo.ro">contact@edoo.ro</a>
+						</p>
+						<p>
+							<strong>Web:</strong><br>
+							<a href="https://edoo.ro">www.edoo.ro</a>
 						</p>
 					</div>
-					<div class="section4mail">
-						<p class="section4contactLinks"><span class="section4Span">E-mail:</span>
-							<a href="mailto:contact@edoo.ro" class="contact-email">contact@edoo.ro</a>
-						</p>
-					</div>
-					<div class="section4website">
-						<p class="section4contactLinks"><span class="section4Span">Web:</span>
-							<a href="http://www.sbc-logistics.ro" class="website">www.sbc-logistics.ro</a>
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-2">
-						<div class="SMIcon">
-							<img src="./Media/FB.svg" alt="" width="14" height="25" />
+					<div class="col-6 col-sm-12">
+						<div class="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2846.896663083853!2d26.10626756287105!3d44.47629088818763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStrada%20Gara%20Her%C4%83str%C4%83u%202%20sbc!5e0!3m2!1sen!2sro!4v1712138000043!5m2!1sen!2sro" width="900" height="450" class="googleMap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
-					<div class="col-2">
-						<div class="SMIcon">
-							<img src="./Media/Linkedin.svg" alt="" width="25" height="25" />
-						</div>
-					</div>
-					<div class="col-2">
-						<div class="SMIcon">
-							<img src="./Media/Insta.svg" alt="" width="25" height="25" />
-						</div>
-					</div>
-				</div>
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2846.896663083853!2d26.10626756287105!3d44.47629088818763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStrada%20Gara%20Her%C4%83str%C4%83u%202%20sbc!5e0!3m2!1sen!2sro!4v1712138000043!5m2!1sen!2sro" width="600" height="450" class="googleMap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				<div class="btnSeeMap">
-					<button type="button" class="seeMap">See full map</button>
 				</div>
 			</div>
-			<div class="col-6 col-tb-6 col-mb-12" id="form">
-				<div class="form">
-					<form action="submit.php" method="get">
-						<label for="fname">First Name:</label><br>
-						<input type="text" name="fname" id="fname" placeholder="First Name" required><br>
-						<label for="lname">Last Name:</label><br>
-						<input type="text" name="lname" id="lname" placeholder="Last Name" required><br>
-						<label for="email">E-mail:</label><br>
-						<input type="email" name="email" id="email" placeholder="E-mail Leave your message here" required><br>
-						<label for="phone">Phone:</label><br>
-						<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="07********" required><br>
-						<label for="textarea">Message:</label><br>
-						<textarea name="textarea" id="textarea" required>Leave your message here</textarea>
-						<div class="row" id="formFooter">
-							<div class="col-8 col-tb-8">
-								<div class="agreement">
-									<input type="checkbox" name="terms" value="Agree" id="defaultCheckbox" required>
-									<label for="defaultCheckbox" class="checkboxLabel">
-										<span class="checkboxCustom"></span>
-										<span class="IAgreeWith">&#160;&#160;&#160;&#160;I agree with <span class="spanLabelTerms">Terms & Conditions</span></span>
-									</label>
-								</div>
-							</div>
-							<div class="col-4 col-tb-4 sendBtn">
-								<input type="submit" value="Send" class="send">
-							</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class=" container">
+			<div class="flex flex-middle">
+				<div class="col-8 col-xs-12 flex">
+					<div class="services">
+						<div class="title">
+							<div class="h3 subheadingFooter">Services</div>
 						</div>
-					</form>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">B2B</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Online</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Package</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Express</a>
+						</div>
+					</div>
+					<div class="services">
+						<div class="title">
+							<div class="h3 subheadingFooter">Partners</div>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 1</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 2</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 3</a>
+						</div>
+						<div class="linkContainer">
+							<a href="#" class="footerLink">Link 4</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-start no-padding-sm">
+					<figure class="logo-footer">
+						<img src="images/edoo-footer.svg" alt="Edoo">
+					</figure>
+				</div>
+				<div class="col-12 col-center-md">
+					<p class="contact">Contact:
+						<a href="tel:0735284346" class="footer-menu-list-item-link">0735.284.346</a>
+						<span> &#124;</span>
+						<a href="mailto:contact@edoo.ro" class="footer-menu-list-item-link"> contact@edoo.ro</a>
+					</p>
 				</div>
 			</div>
 		</div>
-	</main>
+		<hr class="footerRights">
+		<div class="container">
+			<div class=" flex">
+				<div class="col-6 col-sm-12">
+					<p class="footerP">
+						<a href="#" class="footerLink">GDPR</a>
+						<span class="footer-span">&#124;</span>
+						<a href="#" class="footerLink">Privacy Policy</a>
+						<span class="footer-span">&#124;</span>
+						<a href="#" class="footerLink">RMA</a>
+					</p>
+				</div>
+				<div class="col-6 col-sm-12">
+					<p class="footerP footerP-second"> &#169; 2025 All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.bundle.js"></script>
+
 </body>
 
 </html>
