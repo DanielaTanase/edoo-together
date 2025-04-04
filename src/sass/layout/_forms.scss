@@ -106,12 +106,12 @@ input {
 				width:18px;
 				height:18px;
 				margin-right:10px;
-				border:1px solid $grey_light;
+				border:1px solid $purple_dark;
 				border-radius:3px;
 			}
 			&:hover, &:focus {
 				&:before {
-					border-color:$blue;
+					border-color:$purple_light;
 				}
 			}
 		}
@@ -121,8 +121,8 @@ input {
 		&:checked {
 			+ label, + span {
 				&:before {
-					border-color:$blue;
-					background:$blue url('../../images/icon-checkbox.svg') center / 12px no-repeat;
+					border-color:$purple_light;
+					background:$purple_light url('../../images/icon-checkbox.svg') center / 12px no-repeat;
 					background-clip:content-box;
 				}
 			}
@@ -156,17 +156,17 @@ select {
 	margin:0 0 20px;
 	padding:0 15px;
 	padding-right:40px;
-	border:1px solid $grey_light;
+	border:1px solid $purple;
 	border-radius:10px;
 	background:transparent url('../../images/icon-dropdown.svg') right 5px center no-repeat;
 	background-size:30px auto;
-	color:$grey_dark;
+	color:$purple_dark;
 	font-family:$font;
 	font-size:16px;
 	font-weight:400;
 	@extend %ellipsis;
 	&:hover, &:focus {
-		border-color:$blue;
+		border-color:$purple_light;
 	}
 }
 
