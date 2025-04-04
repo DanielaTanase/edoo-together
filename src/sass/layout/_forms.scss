@@ -71,7 +71,7 @@ input {
 		opacity:1;
 	}
 	&:hover, &:focus {
-		border-color:$blue;
+		border-color:$purple;
 	}
 	&:disabled {
 		opacity:.5;
@@ -82,13 +82,12 @@ input {
 	&[type='submit'], &[type='button'] {
 		width:auto;
 		border:0;
-		background:$black;
+		background:$purple;
 		color:$white;
 		cursor:pointer;
 		&:hover,
 		&:focus {
-			background:$yellow;
-			color:$black;
+			background:$black;
 		}
 	}
 	&[type='radio'], &[type='checkbox'] {
@@ -111,7 +110,7 @@ input {
 			}
 			&:hover, &:focus {
 				&:before {
-					border-color:$purple_light;
+					border-color:$purple;
 				}
 			}
 		}
@@ -121,8 +120,8 @@ input {
 		&:checked {
 			+ label, + span {
 				&:before {
-					border-color:$purple_light;
-					background:$purple_light url('../../images/icon-checkbox.svg') center / 12px no-repeat;
+					border-color:$purple;
+					background:$purple url('../images/icon-checkbox.svg') center / 12px no-repeat;
 					background-clip:content-box;
 				}
 			}
@@ -158,7 +157,7 @@ select {
 	padding-right:40px;
 	border:1px solid $purple;
 	border-radius:10px;
-	background:transparent url('../../images/icon-dropdown.svg') right 5px center no-repeat;
+	background:transparent url('../images/icon-dropdown.svg') right 5px center no-repeat;
 	background-size:30px auto;
 	color:$purple_dark;
 	font-family:$font;
@@ -166,7 +165,7 @@ select {
 	font-weight:400;
 	@extend %ellipsis;
 	&:hover, &:focus {
-		border-color:$purple_light;
+		border-color:$purple;
 	}
 }
 
@@ -184,7 +183,7 @@ textarea {
 	font-size:16px;
 	font-weight:400;
 	&:hover, &:focus {
-		border-color:$blue;
+		border-color:$purple;
 	}
 	@include placeholder {
 		color:$grey_light;
@@ -236,7 +235,7 @@ textarea {
 				content:'';
 				width:10px;
 				height:20px;
-				background:url('../../images/icon-arrows.svg') left center / 20px no-repeat;
+				background:url('../images/icon-arrows.svg') left center / 20px no-repeat;
 				transform:rotate(90deg);
 			}
 		}
@@ -281,7 +280,7 @@ textarea {
 			}
 			&:checked {
 				+ label, + span {
-					background:$yellow;
+					background:$purple;
 					color:$black;
 				}
 			}
@@ -312,7 +311,7 @@ textarea {
 	}
 	button {
 		margin:0;
-		background:$blue;
+		background:$purple;
 		color:$black;
 	}
 	[data-error] {

@@ -29,8 +29,11 @@ const renderMarkup = (input, index = 1) => {
 				<div class="article-content h4">
 					<h3 class="h4 article-title"><a href="article.html">${item.title}</a></h3>
 					<p class="article-subtitle">${item.description}</p>
+					<div>${item.language.map(tag => `<span class="tag tag-grey">${tag}</span>`).join('')}</div>
+					<div><span class="tag">${item.topic}</span></div>
+					<div><span class="tag tag-purple-dark">${item.level}</span></div>
 					<span class="article-author">${item.authors}</span>
-					<span class="article-price">${item.price}</span>
+					<span class="article-price">${item.paid ? item.price : `<span class="tag tag-green">FREE</span>`}</span>
 				</div>
 			</article>
 		`;
@@ -106,7 +109,9 @@ const paginationOffset = (result, index) => {
 		if (pagination.current > 1) {
 			markup += `<a class="prev page">&lt;</a>`;
 		}
-		for (let i = 1; i <= pagination.count; i++) {
+		let end = Math.min(Math.max(index + 3, 6), pagination.count);
+		let start = Math.max(Math.min(index - 3, pagination.count - 6), 1);
+		for (let i = start; i <= end; i++) {
 			if (i === index) {
 				markup += `<span class="page current">${i}</span>`;
 			} else {
@@ -208,4 +213,64 @@ document.addEventListener('click', e => {
 			}
 		}
 	}
+});
+
+
+// SLIDER
+let currentIndex = 0;
+let isTransitioning = false;
+
+function moveSlide(step) {
+	if (isTransitioning) return;
+
+	const slides = document.querySelectorAll('.slider .slide');
+	const totalSlides = slides.length;
+
+	currentIndex += step;
+
+	if (currentIndex < 0) {
+		currentIndex = totalSlides - 1;
+	} else if (currentIndex >= totalSlides) {
+		currentIndex = 0;
+	}
+
+	isTransitioning = true;
+
+	const newTransformValue = -currentIndex * 100;
+
+	document.querySelector('.slider').style.transform = `translateX(${newTransformValue}%)`;
+
+	document.querySelector('.slider').addEventListener('transitionend', function onTransitionEnd() {
+		isTransitioning = false;
+		document.querySelector('.slider').removeEventListener('transitionend', onTransitionEnd);
+
+		updateButtons();
+	});
+
+	updateButtons();
+}
+
+function updateButtons() {
+	const slides = document.querySelectorAll('.slider .slide');
+	const prevButtons = document.querySelectorAll('.slide-prev');
+	const nextButtons = document.querySelectorAll('.slide-next');
+
+	if (currentIndex === 0) {
+		prevButtons.forEach(button => button.disabled = true);
+	} else {
+		prevButtons.forEach(button => button.disabled = false);
+	}
+
+	if (currentIndex === slides.length - 1) {
+		nextButtons.forEach(button => button.disabled = true);
+	} else {
+		nextButtons.forEach(button => button.disabled = false);
+	}
+}
+
+updateButtons();
+
+document.addEventListener('click', e => {
+	if (e.target.matches('.slide-prev')) moveSlide(-1);
+	if (e.target.matches('.slide-next')) moveSlide(1);
 });

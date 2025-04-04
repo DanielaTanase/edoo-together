@@ -10,7 +10,7 @@
 		font-weight:400;
 		line-height:30px;
 		&:hover, &:focus {
-			color:$purple_light;
+			color:$purple;
 		}
 		&.current {
 			color:$purple;
@@ -19,7 +19,7 @@
 		&.next, &.prev {
 			color:$grey;
 			&:hover, &:focus {
-				color:$purple_light;
+				color:$purple;
 			}
 		}
 	}
