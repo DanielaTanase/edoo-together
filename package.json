@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "sass --watch src/sass:dist/css & esbuild ./src/js/main.js --bundle --outfile=./dist/js/main.bundle.js --watch & cd ./dist && live-server --port=7000 --ignore=css/sass,css/style.css.map",
+    "start": "sass --watch src/sass:dist/css & esbuild ./src/js/main.js --bundle --outfile=./dist/js/main.bundle.js --watch=forever & cd ./dist && live-server --port=7000 --ignore=css/sass,css/style.css.map",
     "compile": "sass src/sass:dist/css --style=compressed & esbuild ./src/js/main.js --bundle --minify --outfile=./dist/js/main.bundle.js",
     "watch": "sass --watch src/sass:dist/css",
     "build": "esbuild ./src/js/main.js --bundle --outfile=./dist/js/main.bundle.js --watch",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
+    "esbuild": "^0.25.2",
     "eslint": "^9.23.0",
     "live-server": "^1.2.2"
   }
