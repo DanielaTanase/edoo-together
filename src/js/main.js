@@ -233,67 +233,6 @@ document.addEventListener('click', e => {
 	}
 });
 
-
-// SLIDER
-let currentIndex = 0;
-let isTransitioning = false;
-
-function moveSlide(step) {
-	if (isTransitioning) return;
-
-	const slides = document.querySelectorAll('.slider .slide');
-	const totalSlides = slides.length;
-
-	currentIndex += step;
-
-	if (currentIndex < 0) {
-		currentIndex = totalSlides - 1;
-	} else if (currentIndex >= totalSlides) {
-		currentIndex = 0;
-	}
-
-	isTransitioning = true;
-
-	const newTransformValue = -currentIndex * 100;
-
-	document.querySelector('.slider').style.transform = `translateX(${newTransformValue}%)`;
-
-	document.querySelector('.slider').addEventListener('transitionend', function onTransitionEnd() {
-		isTransitioning = false;
-		document.querySelector('.slider').removeEventListener('transitionend', onTransitionEnd);
-
-		updateButtons();
-	});
-
-	updateButtons();
-}
-
-function updateButtons() {
-	const slides = document.querySelectorAll('.slider .slide');
-	const prevButtons = document.querySelectorAll('.slide-prev');
-	const nextButtons = document.querySelectorAll('.slide-next');
-
-	if (currentIndex === 0) {
-		prevButtons.forEach(button => button.disabled = true);
-	} else {
-		prevButtons.forEach(button => button.disabled = false);
-	}
-
-	if (currentIndex === slides.length - 1) {
-		nextButtons.forEach(button => button.disabled = true);
-	} else {
-		nextButtons.forEach(button => button.disabled = false);
-	}
-}
-
-updateButtons();
-
-document.addEventListener('click', e => {
-	if (e.target.matches('.slide-prev')) moveSlide(-1);
-	if (e.target.matches('.slide-next')) moveSlide(1);
-});
-
-
 // SWIPER
 import Swiper, { Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
 
@@ -356,3 +295,23 @@ var swiperGalleryOptions = {
 }
 var swiperGalleryModule = new swiper(swiperGalleryOptions);
 swiperGalleryModule.initSwiper();
+
+var swiperOptions = {
+	element: '.swiper-section .swiper-main',
+	options: {
+		rewind: true,
+		autoplay: {
+			delay: 3000
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		navigation: {
+			nextEl: '.swiper-section .swiper-main .swiper-button-next',
+			prevEl: '.swiper-section .swiper-main .swiper-button-prev',
+		}
+	}
+}
+var swiperModule = new swiper(swiperOptions);
+swiperModule.initSwiper();

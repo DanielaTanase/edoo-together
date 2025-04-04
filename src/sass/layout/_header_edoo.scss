@@ -172,9 +172,7 @@
 				border-bottom-left-radius: 5px;
 				.menu-item-sm {
 					&:hover {
-						border-top-right-radius: 0;
-						border-bottom-left-radius: 5px;
-						border-top-left-radius: 5px;
+						border-radius: 5px;
 						.subnav-content-sm {
 							opacity: 1;
 							height: auto;
@@ -208,4 +206,13 @@
 			align-items: center;
 		}
 	}
+}
+
+@media all and (max-width:$xs) {
+	.header {
+		.subnav-content-sm {
+			left: 0;
+		}
+	}
+
 }
