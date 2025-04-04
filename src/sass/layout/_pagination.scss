@@ -10,16 +10,16 @@
 		font-weight:400;
 		line-height:30px;
 		&:hover, &:focus {
-			color:$yellow;
+			color:$purple_light;
 		}
 		&.current {
-			color:$blue;
+			color:$purple;
 			pointer-events:none;
 		}
 		&.next, &.prev {
-			color:$grey_light;
+			color:$grey;
 			&:hover, &:focus {
-				color:$yellow;
+				color:$purple_light;
 			}
 		}
 	}

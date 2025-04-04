@@ -182,11 +182,6 @@
 		.navbar {
 			display: none;
 		}
-	}
-}
-
-@media all and (max-width:$xs) {
-	.header {
 		.buttons {
 			position:absolute;
 			right: 0;
@@ -206,4 +201,6 @@
 		}
 	}
 }
+
+
 
