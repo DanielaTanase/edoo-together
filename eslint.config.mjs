@@ -1,3 +1,4 @@
+import globals from 'globals';
 import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 
@@ -7,11 +8,17 @@ export default defineConfig([
 		plugins: {
 			js,
 		},
+		languageOptions: {
+			globals: {
+				...globals.node,
+				...globals.browser,
+			}
+		},
 		extends: ['js/recommended'],
 		rules: {
 			'no-prototype-builtins': 'off',
-			'no-unused-vars': 'off',
-			'no-undef': 'off'
+			'no-unused-vars': 'warn',
+			'no-undef': 'warn'
 		}
 	}
 ]);

@@ -68,7 +68,7 @@ const filterData = () => {
 	const { search, paid, language, topic, level } = state;
 	result = data;
 	if (search) {
-		result = result.filter(item => item.title.toLowerCase().includes(search));
+		result = result.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
 	}
 	if (paid !== null) {
 		result = result.filter(item => item.paid === paid);
@@ -127,7 +127,6 @@ const paginationOffset = (result, index) => {
 		document.querySelector('#pagination').innerHTML = '';
 	}
 	result = result.slice(min, max);
-	console.log(pagination);
 	return result;
 }
 
@@ -248,9 +247,6 @@ function swiper({
 	this.initSwiper = function() {
 		if ($element == null) return false;
 
-		var swiper = null,
-			swiperInstance = null;
-
 		options = Object.assign({}, options, { modules: [Navigation, Pagination, EffectFade, Autoplay, Thumbs] })
 
 		if (nav.hasOwnProperty('element') && nav.hasOwnProperty('options')) {
@@ -262,12 +258,12 @@ function swiper({
 						}
 					};
 				options = Object.assign({}, options, thumbsNav);
-				swiper = new Swiper($elements[i], options);
+				new Swiper($elements[i], options);
 			}
 			return false;
 		}
 
-		swiper = new Swiper(element, options);
+		new Swiper(element, options);
 	}
 
 }
