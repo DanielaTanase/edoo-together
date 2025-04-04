@@ -6851,7 +6851,7 @@
     const { search, paid, language, topic, level } = state;
     result = data_default;
     if (search) {
-      result = result.filter((item) => item.title.toLowerCase().includes(search));
+      result = result.filter((item) => item.title.toLowerCase().includes(search.toLowerCase()));
     }
     if (paid !== null) {
       result = result.filter((item) => item.paid === paid);
@@ -7042,7 +7042,6 @@
     var $element = document.querySelector(element), $elements = document.querySelectorAll(element);
     this.initSwiper = function() {
       if ($element == null) return false;
-      var swiper2 = null, swiperInstance = null;
       options = Object.assign({}, options, { modules: [Navigation, Pagination, EffectFade, Autoplay, Thumb] });
       if (nav.hasOwnProperty("element") && nav.hasOwnProperty("options")) {
         for (let i = 0; i < $elements.length; i++) {
@@ -7052,11 +7051,11 @@
             }
           };
           options = Object.assign({}, options, thumbsNav);
-          swiper2 = new core_default($elements[i], options);
+          new core_default($elements[i], options);
         }
         return false;
       }
-      swiper2 = new core_default(element, options);
+      new core_default(element, options);
     };
   }
   var swiperGalleryOptions = {

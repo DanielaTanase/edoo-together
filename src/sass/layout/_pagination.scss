@@ -4,22 +4,31 @@
 	align-items:center;
 	margin:40px 0 60px;
 	.page {
-		margin:0 10px;
-		color:$grey;
+		display:inline-flex;
+		justify-content:center;
+		align-items:center;
+		flex:0 0 auto;
+		min-width:30px;
+		height:30px;
+		margin:0 2px;
+		border-radius:2px;
+		background:$white_alt;
+		color:$purple;
 		font-size:16px;
 		font-weight:400;
 		line-height:30px;
 		&:hover, &:focus {
-			color:$purple;
+			background:$purple_light;
 		}
 		&.current {
-			color:$purple;
+			background:$purple;
+			color:$white;
 			pointer-events:none;
 		}
 		&.next, &.prev {
-			color:$grey;
+			color:$purple;
 			&:hover, &:focus {
-				color:$purple;
+				background:$purple_light;
 			}
 		}
 	}
