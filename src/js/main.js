@@ -127,7 +127,6 @@ const paginationOffset = (result, index) => {
 		document.querySelector('#pagination').innerHTML = '';
 	}
 	result = result.slice(min, max);
-	console.log(pagination);
 	return result;
 }
 

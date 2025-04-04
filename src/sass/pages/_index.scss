@@ -53,13 +53,27 @@ section, .section {
 }
 
 .swiper-section {
+	.swiper-slide {
+		height: 300px;
+		img {
+			width:auto;
+			height:300px;
+			object-fit:cover;
+		}
+	}
 	.swiper-main {
 		width: 100%;
+		max-width:1920px;
+		margin:auto;
 	}
 	.swiper-button-prev {
+		border-radius:5px 0 0 5px;
+		background-color: $white_opacity_5;
 		background-size: 20px auto
 	}
 	.swiper-button-next {
+		border-radius:5px 0 0 5px;
+		background-color: $white_opacity_5;
 		background-size: 20px auto;
 	}
 }
